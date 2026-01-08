@@ -1,7 +1,7 @@
-package com.example.demo.controller;
+package com.sh.calendar_api.controller;
 
-import com.example.demo.domain.CalendarEvent;
-import com.example.demo.service.CalendarService;
+import com.sh.calendar_api.domain.CalendarEvent;
+import com.sh.calendar_api.service.CalendarService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;

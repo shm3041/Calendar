@@ -1,6 +1,6 @@
-package com.example.demo.service;
+package com.sh.calendar_api.service;
 
-import com.example.demo.domain.CalendarEvent;
+import com.sh.calendar_api.domain.CalendarEvent;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
