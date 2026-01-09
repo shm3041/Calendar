@@ -1,6 +1,5 @@
-package com.sh.calendar_api.service;
+package com.sh.calendar_api.calendar;
 
-import com.sh.calendar_api.domain.CalendarEvent;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

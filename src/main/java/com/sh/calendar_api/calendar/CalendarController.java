@@ -1,7 +1,5 @@
-package com.sh.calendar_api.controller;
+package com.sh.calendar_api.calendar;
 
-import com.sh.calendar_api.domain.CalendarEvent;
-import com.sh.calendar_api.service.CalendarService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -12,16 +10,12 @@ import java.util.List;
 
 @RestController // json 반환: RestController, html 반환: Controller
 @RequestMapping("/api/calendar")
-public class CalendarApiController {
+public class CalendarController {
 
     private final CalendarService calendarService; // 권한 검사 담당할 객체 생성
 
-    public CalendarApiController(CalendarService calendarService) {
-        this.calendarService = calendarService;
-    }
+    public CalendarController(CalendarService calendarService) { this.calendarService = calendarService; }
 
     @GetMapping // HTTP GET 요청 처리 ( GET /api/calendar 요청 받기 )
-    public List<CalendarEvent> list() {
-        return calendarService.findAll();
-    }
+    public List<CalendarEvent> list() { return calendarService.findAll(); }
 }
