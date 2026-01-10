@@ -24,7 +24,7 @@ function App() {
 
       {/* 3. 기존 내용은 아래쪽에 그대로 둡니다 */}
       <div className="container mt-4">
-        <h1> 캘린더를 만들어보자 (React)</h1>
+        <h1> 캘린더를 만들어보자 한목이 ㅎㅇ (React)</h1>
         <p>Thymeleaf에서 React로 완벽 전환 중!</p>
         
         <div className="card-list">
