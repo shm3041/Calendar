@@ -6,10 +6,10 @@ function App() {
   const [schedules, setSchedules] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:8080/api/schedule')
+    fetch('http://1.251.205.183:8080/api/calendar')
       .then(response => response.json())
       .then(data => {
-        console.log("데이터 도착함:", data);
+        console.log("백엔드에서 받은 데이터:", data);
         setSchedules(data);
       })
       .catch(error => console.error("백엔드 연결 실패:", error));
