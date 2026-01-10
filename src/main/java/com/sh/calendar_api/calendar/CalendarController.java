@@ -10,7 +10,7 @@ import java.util.*;
 // json 반환: RestController, html 반환: Controller
 @RestController
 @RequestMapping("/api/calendar")
-@CrossOrigin(origins = "http://203.228.49.231:5173")
+@CrossOrigin(origins = "http://localhost:5173")
 public class CalendarController {
 
     private final CalendarService calendarService;
