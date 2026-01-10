@@ -5,8 +5,8 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "users")
+//@Entity
+//@Table(name = "users")
 public class UserEntity {
     // 식별 & 인증
     private Long id;

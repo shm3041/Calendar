@@ -1,19 +1,30 @@
 package com.sh.calendar_api.calendar;
 
+import com.sh.calendar_api.calendar.CalendarService;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.*;
 
-// 비즈니스 로직 ( 권한 검증 )
-// 함수 구현부(func)와 유사
 @Service
 public class CalendarService {
 
+    // 임시 저장소 (DB 전 단계)
+    private final List<CalendarEvent> events = new ArrayList<>();
+
+    // 전체 조회
     public List<CalendarEvent> findAll() {
-        // TODO: DB, 권한, 검증 로직 추가할 것
-        return List.of(
-                new CalendarEvent(1L, "회의"),
-                new CalendarEvent(2L, "공부")
-        );
+        return events;
+    }
+
+    // 일정 추가
+    public CalendarEvent save(CalendarEvent event) {
+        event.setId(UUID.randomUUID().toString());
+        events.add(event);
+        return event;
+    }
+
+    // 일정 삭제
+    public void deleteById(String id) {
+        events.removeIf(e -> e.getId().equals(id));
     }
 }

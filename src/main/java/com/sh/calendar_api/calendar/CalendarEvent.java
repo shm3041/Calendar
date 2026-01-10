@@ -4,18 +4,33 @@ package com.sh.calendar_api.calendar;
 // 함수 구현부(func)에서 사용할 class, struct
 
 public class CalendarEvent {
-    public enum EventType { HIGH, MEDIUM, LOW }
 
-    private Long id;
+    private String id;
     private String title;
-    private String memo;
-    private EventType memoPriority;
+    private String date; // yyyy-MM-dd
 
-    public CalendarEvent(Long id, String title) {
+    // getter / setter
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
         this.id = id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
         this.title = title;
     }
 
-    public Long getId() { return id; }
-    public String getTitle() { return title; }
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
 }
