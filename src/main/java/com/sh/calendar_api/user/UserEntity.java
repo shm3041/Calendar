@@ -1,6 +1,6 @@
 package com.sh.calendar_api.user;
 
-import jakarta.persistence.*;
+//import jakarta.persistence.*;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;

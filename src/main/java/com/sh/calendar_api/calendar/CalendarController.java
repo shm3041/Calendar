@@ -10,7 +10,7 @@ import java.util.*;
 // json 반환: RestController, html 반환: Controller
 @RestController
 @RequestMapping("/api/calendar")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://203.228.49.231:5173")
 public class CalendarController {
 
     private final CalendarService calendarService;
@@ -20,17 +20,12 @@ public class CalendarController {
     }
 
     @GetMapping
-    public List<CalendarEvent> getEvents() {
+    public List<CalendarEventDto> getEvents() {
         return calendarService.findAll();
     }
 
     @PostMapping
-    public CalendarEvent addEvent(@RequestBody CalendarEvent event) {
-        return calendarService.save(event);
-    }
-
-    @DeleteMapping("/{id}")
-    public void deleteEvent(@PathVariable String id) {
-        calendarService.deleteById(id);
+    public CalendarEventDto addEvent(@RequestBody CalendarEventDto event) {
+        return calendarService.add(event);
     }
 }
