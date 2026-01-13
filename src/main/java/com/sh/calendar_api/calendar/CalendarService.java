@@ -14,7 +14,7 @@ public class CalendarService {
         CalendarEventDto sample = new CalendarEventDto();
         sample.setId("1");
         sample.setTitle("첫 일정");
-        sample.setDate("2026-01-10");
+        sample.setDate("2026-01-11");
         events.add(sample);
     }
 
